@@ -1,0 +1,365 @@
+*{
+    box-sizing: border-box;
+}
+
+body{
+    background-image: url('img/background.png');
+    color:#666;
+
+}
+
+.container{
+    width:100%;
+    max-width: 1170px;
+    margin:0 auto;
+}
+
+
+/* .wrapper{
+
+} */
+
+.heading{
+    padding:0 15px;
+    
+}
+
+/* CSS Extra 1 By : Aditiya Lityanian Al Nasir */
+.wrapper h2{
+    padding-top:20px;
+    color:#000;
+}
+
+.wrapper h3.heading{
+    margin-top:-10px ;
+    padding-bottom:20px;
+    margin-bottom:-10px;
+}
+
+.profile-wrapper{
+    margin:20px auto;
+    width:100%;
+    display: flex;
+    flex-flow:row wrap;
+}
+
+.profile-box{
+    width:48%;
+    display:flex;
+    background-color:rgba(255,255,255,0.9);
+    margin:10px auto;
+}
+.profile-heading{
+    background-color:rgba(255,255,255,0.9);
+    text-align: center;
+}
+
+.profile-img img{
+    width:150px;
+    border-radius:70%;
+    padding:0 5px;
+
+}
+
+.flex-vertical{
+    display:flex;
+    flex-direction:column;
+    flex-wrap:wrap;
+    width:70%;
+}
+
+div.flex-vertical.center{
+    margin:0 auto;
+    width:90%
+}
+
+.left{
+    text-align: right;
+}
+
+.right{
+    text-align: left;
+}
+
+.center{
+    text-align:center;
+    margin:0 auto;
+}
+
+.profile-name,.profile-region,.profile-desc{
+    padding:0 15px;
+}
+
+.profile-region{
+    margin-top:-30px;
+}
+
+.profile-desc{
+    margin-top:-20px;
+}
+
+/* CSS Extra 1 Last Line By : Aditiya Lityanian Al Nasir */
+
+/* CSS Landing Page By : Agus Wijiyantho */
+a {
+    text-decoration: none;
+    color:white;
+  }
+  
+  .top-main {
+    padding: 100px 0;
+    background-image: url(https://images.pexels.com/photos/1172675/pexels-photo-1172675.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940);
+    background-size: cover;
+    text-align: center;
+    color: white;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  }
+  .container {
+    width: 90%;
+    margin: 0 auto;
+  }
+  .top-main h1 {
+    font-size: 40px;
+    letter-spacing: 2px;
+  }
+  .top-main p {
+    font-size: 25px;
+    margin-bottom: 10px;
+  }
+  .btn {
+    margin: 20px 10px;
+    padding: 13px 26px;
+    color: white;
+    display: inline-block;
+    opacity: 0.8;
+    border-radius: 5px;
+  }
+  .btn:hover {
+    opacity: 1;
+  }
+  .btn.action {
+    font-size: 20px;
+    font-weight:bold;
+    background-color: red;
+  }
+  .mid-main {
+    padding: 40px 0px;
+    background-color: rgb(218, 251, 235);
+  }
+  .mid-main h1 {
+    font-size: 40px;
+    letter-spacing: 2px;
+  }
+  .mid-main p {
+    font-size: 20px;
+  }
+  .link {
+    color: blue;
+    font-size: 20px;
+    font-family: sans-serif;
+    font-weight: normal;
+  }
+  .ask {
+    color: red;
+  }
+  .wrap {
+    top: 0;
+    display: flex;
+    flex-wrap: wrap;
+    list-style: none;
+  }
+  .wrap li {
+    flex:auto;
+    width: 50%;
+  }
+  .list {
+    list-style: circle;
+    font-size: 18px;
+    font-weight: bold;
+    font-style: italic;
+  }
+  
+  li{
+    list-style: none;
+  }
+  /* CSS Landing Page Last Line By : Agus Wijiyantho */
+  
+ /* CSS Footer By : Aji Tio Kuswandhito */ 
+  .footer-container{
+    padding: 30px 15px;
+    text-align: center;
+    background-color: rgba(255,255,255,0.9);
+  }
+
+  .footer-container .btn-footer{
+    margin: 20px auto;
+    font-size: 55px;
+  }
+
+  .footer-container .btn-footer a.btn{
+    padding-right:35px;
+    padding-left:0px;
+    opacity: 0.6;
+  }
+
+  .footer-container .border-right{
+    border-right: 2px solid #3ddad7 ;
+  }
+
+  .footer-container .btn-footer a.btn:hover{
+    opacity: 1;
+  }
+
+  footer .fab{
+    color: #2a93d5;
+  }
+  /* ini css work from home */
+  .footer-container .list{
+    letter-spacing: 2px;
+    color: #aed9da;
+    
+  }
+  footer .fas{
+    font-size: 20px;
+    color: #aed9da;
+  }
+  footer .list-footer-home,
+  footer .list-footer-shoe{
+    border-right: 1px solid #aed9da;
+    padding-right: 4px;
+    color: #2a93d5;
+  }
+  /* CSS Footer Last Line By : Aji Tio Kuswandhito */ 
+  
+  header {
+    background-image: url(img/header.jpg);
+    height: 70px;
+    opacity: 0.9;
+    width: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 10;
+}
+/*Logo Kiri Header*/
+
+.header-logo {
+  height: 70px;
+  float: left;
+}
+
+.header-logo img {
+  height: 60px;
+  float: left;
+  padding-top: 7px;
+  padding-left: 15px
+}
+
+.header-logo h1 {
+  float: left;
+  font-size: 30px;
+  letter-spacing: 2px;
+  padding-left: 5px;
+  color: #ffffff;
+}
+
+.header-logo span {
+  color: firebrick;
+  font-weight: bold;
+}
+
+
+/*Menu Kanan Header*/
+
+.header-list {
+  float: right;
+  color: white;
+  font-size: 20px;
+}
+
+.button {
+  color: white;
+  display: inline-block;
+  border-radius: 5px;
+  height: 70px;
+  line-height: 60px;
+  float: left;
+  padding: 5px 20px 5px 20px;
+}
+
+.button:hover {
+  background-color: rgba(51, 153, 255, 0.5);
+  transition: all 0.5s;
+}
+
+.button:active {
+  background-color: rgba(15, 19, 255, 1);
+}
+
+
+/*Menu Responsif*/
+
+.menu img {
+  display: none;
+  color: white;
+  float: right;
+  height: 50px;
+  padding: 10px;
+}
+
+.header-list .button a:visited{
+  color:whiite;
+}
+
+.header-list .button a{
+  display:inline-block;
+}
+
+a.white{
+  color:white;
+}
+
+/* CSS Footer Last Line By : Aji Tio Kuswandhito */ 
+
+/* CSS Extra Part 2 by : Aliffah Rahmi */
+.contact-form h3{
+	font-family:"Avenir Next";
+	border-bottom:1px solid #dee7ec;
+	padding-bottom:10px;
+}
+.contact-form{
+  background-color:white;
+  padding:30px 20px;
+  margin:40px auto;
+}
+input{
+	width:250px;
+	margin-top:3px;
+	padding:10px;
+	font-size:16px;
+	border:1px solid #dee7ec;
+	margin-left:20px;
+	margin-bottom:20px;
+}
+textarea{
+	width:250px;
+	margin-top:3px;
+	padding:8px;
+	font-size:16px;
+	border:1px solid #dee7ec;
+	margin-left:20px;
+	margin-bottom:20px;
+}
+.contact-submit{
+	background-color:#5dca88;
+	color:black;
+	cursor:pointer;
+	box-shadow:0 7px #1a7940;
+}
+.contact-submit:active{
+	position:relative;
+	top:5px;
+	box-shadow:none;
+}
+
+/* CSS Extra Part 2 Last Line by : Aliffah Rahmi */
