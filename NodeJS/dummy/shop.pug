@@ -1,0 +1,25 @@
+extends layouts/main-layout.pug
+
+block title
+    title Welcome to My Shop
+
+block style
+    link(rel="stylesheet", href="/css/product.css")    
+
+block content
+    main
+        if prods.length > 0
+            .grid
+                each product in prods 
+                    article.card.product-item
+                        header.card__header
+                            h1.product__title #{product.title}
+                        .card__image
+                            img(src="https://i.dlpng.com/static/png/6652402_preview.png")
+                        .card__content
+                            h2.product__price $19.99
+                            p.product__description A veryinteresting book about so manyeven more interesting things!
+                        .card__actions
+                            button.btn Add toCard                         
+        else
+            h1 No Product                    
