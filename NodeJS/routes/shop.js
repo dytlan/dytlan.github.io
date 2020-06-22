@@ -3,7 +3,7 @@
 const express   = require('express');
 
 // const basePath  = require('../helpers/basepath');
-const productsController = require('../controllers/productsController');
+const shopController = require('../controllers/shopController');
 
 const router    = express.Router();
 
@@ -12,6 +12,12 @@ const router    = express.Router();
 //     next(); // Allow the request to continue to the next middleware in line
 // });
 
-router.get('/',productsController.getProducts);
+router.get('/',shopController.getIndex);
+router.get('/products',shopController.getProducts);
+router.get('/products/:productId',shopController.getProductDetail);
+router.get('/cart',shopController.getCart);
+router.post('/cart',shopController.postCart);
+router.get('/orders',shopController.getOrders);
+router.get('/checkout',shopController.getCheckout);
 
 module.exports = router;
