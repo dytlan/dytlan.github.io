@@ -1,3 +1,5 @@
+const path  = require('path');
+
 const express = require('express');
 
 const app = express();
@@ -7,14 +9,14 @@ const app = express();
 //     next();
 // })
 
-app.use('/users',(req,res,next)=>{
-    console.log('In users path');
-    res.send('<h1> Hello from "/users" page </h1>')
+app.use(express.static(path.join(__dirname,'public')));
+
+app.get('/users',(req,res,next)=>{
+    res.sendFile(path.join(__dirname,'views','users.html'))
 });
 
-app.use('/',(req,res,next)=>{
-    console.log('In Middleware');
-    res.send('<h1> Hello from "/" Page');
+app.get('/',(req,res,next)=>{
+    res.sendFile(path.join(__dirname,'views','main.html'))
 })
 
 

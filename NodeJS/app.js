@@ -11,6 +11,16 @@ const shopRoutes       = require('./routes/shop');
 const errorRoutes      = require('./routes/error');
 // const basePath      = require('./helpers/basepath');
 
+const database      = require('./helpers/database');
+
+database.execute('SELECT * FROM products')
+    .then(result => {
+        console.log(result);
+    })
+    .catch(err => {
+        console.log(err);
+    });
+
 // app.engine('handlebars',expressHBars());
 
 app.set('view engine', 'ejs');

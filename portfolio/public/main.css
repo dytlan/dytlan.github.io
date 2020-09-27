@@ -1,0 +1,125 @@
+body{
+    background-image: url('./img/background.png');
+}
+
+header{
+    background-color:white;
+    margin: 25px 30px;
+    opacity: 90%;
+}
+
+div.header{
+    width: 90%;
+    height: 20%;
+    display: flex;
+}
+
+div.header__picture{
+    width: 15%;
+}
+
+div.header__picture img{
+    margin: 20px 20px 30px 75px;
+    height: 150px;
+}
+
+.flex-down-bio{
+    margin-left:10px;
+    width: 70%;
+}
+
+div.flex-down-bio div.header__name{
+    margin-top: 55px;
+}
+
+.header__job{
+    color: gray;
+}
+
+.social-media{
+    font-size: 30px;
+}
+
+span.social-media a i{
+    color: black;
+}
+
+span.social-media a:hover i{
+    color: red;
+}
+
+div.header__contact-us{
+    margin: auto;
+    width: 30%;
+}
+
+div.header__contact-us a button{
+    width: 125px;
+
+}
+
+div.flex-row{
+    display: flex;
+}
+
+div.flex-colA{
+    flex-direction: column;
+    width: 65%;
+}
+
+div.flex-colB{
+    flex-direction: column;
+    width: 35%;
+}
+
+
+div.body__about-me,
+div.body__project,
+div.body__work-experience{
+    padding: 20px;
+    width: 95%;
+    margin: 0 30px 15px 30px;
+    background-color: #fff;
+}
+
+div.body__project div.sub-body__frame{
+    text-align: center;
+    margin: auto;
+}
+div.sub-body__frame h6{
+    color: gray;
+}
+
+div.sub-body__frame iframe{
+    width: 90%;
+    height: 500px;
+}
+
+div.body__work-experience pre{
+    color:gray;
+}
+
+footer{
+    margin-top:20px;
+    background-color: black;
+    color: white;
+    padding: 10px 0;
+    margin: auto;
+}
+
+footer p{
+    text-align: center;
+}
+
+div.contact,
+div.skill,
+div.education{
+    padding: 20px;
+    width: 86%;
+    margin: 0 30px 15px 30px;
+    background-color: #fff;
+}
+
+div.skill b{
+    color: gray;
+}

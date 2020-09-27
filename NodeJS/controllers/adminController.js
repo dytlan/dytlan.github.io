@@ -2,11 +2,49 @@ const Product = require('../models/product');
 
 exports.getAddProduct = (req,res,next)=>{
     // res.sendFile(path.join(basePath,'views','add-product.html'));
-    res.render('admin/add-product',{
+    res.render('admin/edit-product',{
         path: '/admin/add-product',
-        pageTitle: 'Add Product'
+        pageTitle: 'Add Product',
+        editing: false
     });
 };
+
+exports.getEditProduct = (req,res,next)=>{
+    const editMode = req.query.edit;
+    if (!editMode){
+        return res.redirect('/');
+    }
+    const productId = req.params.productId;
+    Product.findById(productId,product => {
+        if(!product){
+            return res.redirect('/');
+        }
+        res.render('admin/edit-product', {
+            path: '/admin/edit-product',
+            pageTitle: 'Edit Product',
+            editing: editMode,
+            product: product
+        });
+    });
+};
+
+exports.postEditProduct = (req,res,next) => {
+    const productId            = req.body.productId;
+    const updatedTitle         = req.body.title;
+    const updatedImageUrl      = req.body.imageUrl;
+    const updatedPrice         = req.body.price;
+    const updatedDescription   = req.body.description;
+
+    const updatedProduct       = new Product(
+        productId,
+        updatedTitle,
+        updatedImageUrl,
+        updatedPrice,
+        updatedDescription
+        );
+    updatedProduct.save();
+    res.redirect('/admin/products');
+}
 
 exports.postAddProduct = (req,res,next)=>{
     const title         = req.body.title;
@@ -14,15 +52,22 @@ exports.postAddProduct = (req,res,next)=>{
     const price         = req.body.price;
     const description   = req.body.description;
 
-    const product = new Product(title,imageUrl,price,description);
+    const product = new Product(null,title,imageUrl,price,description);
     
     product.save();
     return res.redirect('/');
 };
 
+exports.postDeleteProduct   = (req,res,next) => {
+    const productId = req.body.productId;
+    Product.deleteById(productId);
+    res.redirect('/admin/products');
+
+}
+
 exports.getProduct = (req,res,next) => {
     Product.fetchAll(products=>{
-        res.render('admin/product-list',{
+        res.render('admin/products',{
             prods: products ,
             path: '/admin/products',
             pageTitle : 'Get Admin Products'
